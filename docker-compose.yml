@@ -1,0 +1,11 @@
+version: '3'
+services:
+  linux_examples:
+    build: .
+    container_name: "linux_examples"
+    privileged: true
+    hostname: "linux_examples"
+    tty: true
+    volumes: 
+      - .:/root/workdir
+    command: /bin/bash
