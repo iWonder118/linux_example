@@ -1,3 +1,5 @@
+#define RESET   "\033[0m"
+#define BLUE    "\033[34m"  
 #include <stdio.h>
 #include <dirent.h>
 int main(int argc, char**argv) {
@@ -13,7 +15,7 @@ int main(int argc, char**argv) {
     return 1;
   }
   while ((dent = readdir(dir)) != NULL) {
-    printf("%s\n", dent->d_name);
+    printf(BLUE "%s\n" RESET, dent->d_name);
   }
   closedir(dir);
   return 0;
